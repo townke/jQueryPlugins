@@ -56,8 +56,10 @@
 			this.element.width(0)
 						.height('100%')
 						.addClass('bui-sidebar');
-			if(this.options.background) this.element.css('background',this.options.background);	
-			if(this.options.background) this.element.handler.css('background',this.options.background);			
+			if(this.options.background) {
+				this.element.css('background',this.options.background);	
+				this.element.handler.css('background',this.options.background);	
+			}
 			this.element.before(this.element.handler);
 			this._repos(this.element.handler);
 			$(window).resize(function(){that._repos(that.element.handler);});
